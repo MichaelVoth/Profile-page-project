@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-container">
+            <div class="navbar">
+                <h1 class="nav-item">Profile</h1>
+                <div class="nav-link">
+                    <a href="#" class="nav-item">Home</a>
+                    <a href="#" class="nav-item">My Profile</a>
+                    <a href="#" class="nav-item">Find Connections</a>
+                </div>
+                <button class="nav-item">Sign Out</button>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content-bar">
+                <div class="content">
+                    <div class="card">
+                        <div class="profile-header">
+                            <img src="images/jane-m.jpg" alt="Profile Pic" class="avatar">
+                        </div>
+                        <div class="profile-body">
+                            <h1 class="content-text" id="user-name">Jane Doe</h1>
+                            <h2 class="content-text"><img src="icons/map-marker.png" alt="map-marker"
+                                    class="icon">Seattle, WA</h2>
+                            <p class="content-text">Developer | Engineer | Problem Solver<br>
+                                Master of shadows and the Internet!</p>
+                            <h4 class="content-text"><img src="icons/gear.png" alt="gear" class="icon"><a href="#" onclick="nameEdit()">Edit Profile</a></h4>
+                            <div id="name-change" class="content-text">
+                                <form><input id="name-editor" type="text" placeholder="New Name">
+                                <button id="submit" onclick="changeName()">Submit</button></form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header">
+                            <h2 class="header-text">Education</h2>
+                        </div>
+                        <h3 class="content-text">Coding Dojo - Full Stack Bootcamp</h3>
+                        <p style="color: gray;" class="content-text">December 2019 - March 2020</p>
+                        <p class="content-text">Triple black belt in Python, MERN, C#...</p>
+                    </div>
+                </div>
+                <div class="connection-bar">
+                    <div class="connections">
+                        <div class="header">
+                            <h3 class="header-text"><span id="request-count">2</span>Connection Requests</h3>
+                        </div>
+                        <div>
+                            <div class="friend-request" id="ToddS">
+                                <a href="#"><img src="images/todd-s.jpg" alt="todd-s" class="friend-avatar icon"></a>
+                                <h3 class="friend-name">Todd S.</h3>
+                                <a href="#"><img src="icons/accept-circle.png" alt="accept-circle" class="icon" onclick="acceptTodd(ToddS)"></a>
+                                <a href="#"><img src="icons/close-circle.png" alt="close-circle" class="icon" onclick="rejectTodd(ToddS)"></a>
+                            </div>
+                            <div class="friend-request" id="PhilS">
+                                <a href="#"><img src="images/phil-s.jpg" alt="phil-s" class="friend-avatar icon"></a>
+                                <h3 class="friend-name">Phil S.</h3>
+                                <a href="#"><img src="icons/accept-circle.png" alt="accept-circle" class="icon" onclick="acceptPhil(PhilS)"></a>
+                                <a href="#"><img src="icons/close-circle.png" alt="close-circle" class="icon" onclick="rejectPhil(PhilS)"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="connections">
+                        <div class="header">
+                            <h3 class="header-text"><span id="friend-count">489</span>Your Connections</h3>
+                        </div>
+                        <div class="friend-list">
+                            <a href="#"><img src="images/adrien-s.jpg" alt="adrien-s" class="friend-avatar icon"></a>
+                            <h3 class="friend-name">Adrien S.</h3>
+                        </div>
+                        <div class="friend-list">
+                            <a href="#"><img src="images/alayne-s.jpg" alt="alayne-s" class="friend-avatar icon"></a>
+                            <h3 class="friend-name">Alaynen S.</h3>
+                        </div>                        
+                        <div class="friend-list">
+                            <a href="#"><img src="images/anne-s.jpg" alt="anne-s" class="friend-avatar icon"></a>
+                            <h3 class="friend-name">Anne S</h3>
+                        </div>
+                        <div class="friend-list">
+                            <a href="#"><img src="images/arry-s.jpg" alt="arry-s" class="friend-avatar icon"></a>
+                            <h3 class="friend-name">Arry S.</h3>
+                        </div>
+                        <div class="more-friends">
+                            <a href="#">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
